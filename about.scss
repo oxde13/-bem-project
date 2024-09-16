@@ -20,11 +20,12 @@ $padding:20px;
 
 .page-about{
     font-family: 'Times New Roman', Times, serif;
-    margin: 0;
-    padding:0;
+    margin: 0 auto;
+    padding: var(--padding);
     color:$text-color;
+    max-width: 1200px;
 }
- 
+
   // Шапка страницы
   .header {
     background-color: $two-color;
