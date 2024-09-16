@@ -1,0 +1,79 @@
+$one-color:hsla(0, 92%, 48%, 0.2);
+$two-color:#1023f333;
+$three-color:#10f31f33;
+$text-color:#333;
+$padding:20px;
+
+// Миксин для центрирования элементов по flex
+@mixin flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  // Миксин для адаптивности (мобильные устройства)
+  @mixin responsive($breakpoint) {
+    @media (max-width: $breakpoint) {
+      @content;
+    }
+  }
+
+.page-about{
+    font-family: 'Times New Roman', Times, serif;
+    margin: 0;
+    padding:0;
+    color:$text-color;
+}
+ 
+  // Шапка страницы
+  .header {
+    background-color: $two-color;
+    padding: $padding;
+  
+    &__nav {
+      margin: 0;
+    }
+  
+    &__link {
+      list-style: none;
+      padding: 0;
+      @include flex-center; // Применение миксина для центрирования элементов
+  
+      gap: 10px;
+             &:hover {
+        color: blue;
+        
+      }
+    }
+  }
+  
+  // Основной контент
+  .about {
+    padding: $padding;
+  
+    &__title {
+      font-size: 2rem;
+      margin-bottom: 10px;
+    }
+  
+    &__text {
+      margin-bottom: $padding;
+    }
+      }
+  
+    
+  // Футер
+  .footer {
+    background-color: $three-color;
+    color: white;
+    padding: $padding;
+  
+    &__title {
+      margin-bottom: 10px;
+    }
+  
+    &__email, &__phone {
+      color: $two-color;
+  
+    }
+  }
